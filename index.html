@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Immortal AR</title>
+
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@ar-js-org/ar.js"></script>
+
+<style>
+body { margin:0; overflow:hidden; }
+</style>
+
+</head>
+
+<body>
+
+<a-scene
+xrweb="mode: ar; referenceSpaceType: local;"
+renderer="colorManagement: true;"
+vr-mode-ui="enabled: false"
+>
+
+<a-assets>
+<a-asset-item id="jack" src="assets/jackyboi.glb"></a-asset-item>
+</a-assets>
+
+<a-entity
+gltf-model="#jack"
+scale="10.2 10.2 10.2"
+position="0 -1 -2"
+rotation="0 180 0">
+</a-entity>
+
+<a-camera position="0 1.6 0"></a-camera>
+
+</a-scene>
+
+</body>
+</html>
